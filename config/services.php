@@ -31,4 +31,15 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'google' => [
+        'application_name' => env('GOOGLE_APPLICATION_NAME', 'Gmail-Api'),
+        'client_id' => env('GOOGLE_CLIENT_ID'),
+        'gmail_api_key' =>env('GMAIL_API_KEY'),
+        'client_secret' => env('GOOGLE_CLIENT_SECRET'), // Ensure this line is present
+        'redirect' => env('GOOGLE_REDIRECT_URI'),
+        'project_id' => env('GOOGLE_PROJECT_ID'),
+        'scopes'           => [\Google\Service\Gmail::MAIL_GOOGLE_COM],
+        'access_type'      => 'offline',
+        'approval_prompt'  => 'force',
+    ],
 ];
